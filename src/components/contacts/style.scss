@@ -1,0 +1,86 @@
+@import '../../sass/mixins';
+
+.contacts {
+    margin-top: 120px;
+    margin-left: 52px;
+    margin-right: 35px;
+    padding-bottom: 170px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 620px;
+        grid-template-rows: 600px;
+        grid-auto-rows: 600px;
+        justify-content: space-between;
+    }
+    &__title {
+        padding-left: 12px;
+        position: relative;
+        @include before_cirkle;
+    }
+    &__subtitle {
+        margin-top: 6px;
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    &__right {
+        .divider {
+            margin-top: 4px;
+        }
+    }
+    &__left {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__social {
+        display: flex;
+        margin-top: 20px;
+        a {
+            padding-right: 25px;
+            transition: all 0.4s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__form-container {
+        margin-top: 27px;
+    }
+}
+
+@media (max-width: 1183px) {
+    .contacts {
+        margin-left: 20px;
+        margin-right: 0px;
+        &__left {
+            display: none;
+        }
+        &__wrapper {
+            justify-content: center;
+            grid-template-columns: 600px;
+        }
+        &__right {
+            justify-self: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts {
+        margin-top: 40px;
+        margin-left: 0px;
+        margin-right: 0px;
+        &__right {
+            .divider {
+                margin-top: 15px;
+            }
+    }
+    &__subtitle {
+        margin-top: 26px;
+    }   
+}
+}

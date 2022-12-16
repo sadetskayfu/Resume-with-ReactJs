@@ -1,0 +1,11 @@
+.skills_card_container {
+    width: 270px;
+    padding: 30px;
+    box-shadow: 1px 1px 1px 1px black;
+    display: grid;
+    grid-template-rows: 65px 21px minmax(94px, auto);
+    row-gap: 15px;
+    &__title {
+        margin-top: 5px;
+    }
+}

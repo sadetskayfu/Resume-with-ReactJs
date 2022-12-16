@@ -1,0 +1,32 @@
+@import './../../sass/variables';
+
+.burger_menu_container {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+    transition: 0.5s;
+    pointer-events: none;
+    &.active {
+        opacity: 1;
+        pointer-events: all; 
+    }
+    &__content {
+        height: 100vh;
+        padding: 20px;
+        min-width: 300px;
+        background-color: $main-color;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+        &.active {
+            transform: translateX(0);
+        }
+    }
+}

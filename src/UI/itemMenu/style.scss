@@ -1,0 +1,17 @@
+@import '../../sass/variables';
+
+.menu-item-wrapper {
+    height: 45px;
+    width: 100%;
+    padding: 12px 25px;
+    background: none;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+    color:black;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        color:white;  
+    }
+}

@@ -1,0 +1,42 @@
+@import '../../sass/mixins';
+@import '../../sass/variables';
+
+.skill-raitings-card {
+    height: 70px;
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: minxmax(125px, auto) minmax(35px, auto);
+    grid-template-rows: minmax(21px, auto) 14px;
+    grid-template-areas: 
+    'title counter'
+    'line line';
+    justify-content: space-between;
+
+    &__title {
+        position: relative;
+        padding-left: 13px;
+        @include before_cirkle;
+        grid-area: title;
+        &:before {
+            margin-top: 5px;
+        }
+    }
+    &__line {
+        height: 14px;
+        width: 100%;
+        background: #E8E4DE;
+        border-radius: 4px;
+        grid-area: line;
+        position: relative;
+        span {
+            height: 100%;
+            background-color: $main-color;
+            display: block;
+            border-radius: 4px;
+        }
+    }
+    &__counter {
+        grid-area: counter;
+    }
+}
+

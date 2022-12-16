@@ -1,0 +1,45 @@
+.skills {
+    margin-top: 120px;
+    &__items {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px,auto));
+        grid-template-rows: repeat(auto-fit,270px);
+        grid-auto-rows: 270px;
+        justify-content: space-between;
+        gap:15px;
+    }
+    &__raitings {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 350px);
+        grid-template-rows: repeat(2, 70px);
+        row-gap: 30px;
+        column-gap: 45px;
+    }
+}
+
+@media (max-width: 1387px) {
+    .skills {
+        &__items {  
+            justify-content: center;
+        }
+        &__raitings {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .skills {
+        margin-top: 40px;
+        &__items {
+            margin-top: 20px;
+        }
+        &__raitings {
+            grid-template-columns: repeat(auto-fit, 300px);
+            margin-top: 40px;
+            gap: 40px;
+        }
+    }
+}

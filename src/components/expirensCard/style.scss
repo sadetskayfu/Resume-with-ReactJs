@@ -1,0 +1,50 @@
+@import '../../sass/mixins';
+
+.expirens_card_container {
+    display: grid;
+    grid-template-columns: 40px 315px;
+    grid-template-rows: minmax(40px, auto) minmax(80px, auto);
+    grid-auto-rows: auto;
+    row-gap: 12px;
+    padding-left: 43px;
+    column-gap:20px;
+    grid-template-areas:
+    'icons title'
+    'text text';
+    &__icons {
+        grid-area: icons;
+        display: flex;
+        padding-left:15px;
+        padding-top: 10px;
+        position: relative;
+        @include before_cirkle;
+        &:before {
+            top:50%;
+            transform: translateY(-50%);
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 43px;
+            left: -43px;
+            top:50%;
+            background-color:black;
+        }
+    }
+    &__title {
+        grid-area: title;
+    }
+    &__text {
+        grid-area: text;
+    }
+    &__desc {
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 576px) {
+    .expirens_card_container {
+        grid-template-columns: 40px auto;
+    }
+}

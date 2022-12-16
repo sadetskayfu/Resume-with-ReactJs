@@ -1,0 +1,16 @@
+.hamburger_button {
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    span {
+        background-color: #151812;
+        width: 30px;
+        height: 3px;
+    }
+    span.long {
+        width: 36px;
+    }
+}

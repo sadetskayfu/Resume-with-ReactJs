@@ -1,0 +1,120 @@
+@import '../../sass/mixins';
+
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../../assets/images/Background.jpg') no-repeat 50%/cover;
+    padding-top: 205px;
+
+    &__title {
+        width: 535px;
+        margin-top: 10px;
+    }
+
+    &__btns {
+        display: flex;
+        margin-top: 25px;
+        width: 270px;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        @include before_cirkle;
+        z-index: 2;
+    }
+}
+
+.sidepanel {
+    position: fixed;
+    z-index: 3;
+    transform: rotate(-90deg);
+    top: 380px;
+    left:-120px;
+    width: 340px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+        transform: rotate(90deg);
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.3) rotate(90deg);
+        }
+    }
+
+    &__divider {
+        width: 70px;
+        height: 2px;
+        background-color: black;
+    }
+
+    &__text {
+        font-weight: bold;
+    }
+}
+
+.burger_button {
+    position: fixed;
+    z-index: 4;
+    top: 20px;
+    right: 30px;
+}
+
+.menu_content {
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__items {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        
+    }
+    &__social {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 50px;
+        a {
+            transform: rotate(90deg);
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.3) rotate(90deg);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .promo {
+        background: url('../../assets/images/Background.jpg') no-repeat 60%/cover;
+    }
+}
+
+@media (max-width: 576px) {
+    .promo {
+        &__title {
+            width: 300px;
+            margin-top: 9px;
+        }
+    
+    }
+    .burger_button {
+        right: 20px;
+    }
+}

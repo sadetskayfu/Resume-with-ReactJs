@@ -1,0 +1,22 @@
+@import './../../sass/variables';
+
+.button_navigation {
+    height: 45px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 12px 25px;
+    background: linear-gradient(to bottom right, $main-color, $secondary-color);
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+    color:black;
+    &:hover {
+        background: linear-gradient(to top left, $main-color, $secondary-color);
+        rotate: 2deg;
+        color:white;
+    }
+    &.active {
+        background: none;
+        box-shadow: none;
+    }
+}
+
