@@ -1,12 +1,12 @@
 import React from 'react';
 import './style.scss'
 
-const ContactsTextarea = ({ id, label, name, value, onChange }) => {
+const ContactsTextarea = ({ register, id, label, ...props }) => {
     return (
         <div className='contacts-container-textarea'>
-            <textarea name={name}
-                value={value}
-                onChange={onChange}
+            <textarea
+                {...register} 
+                {...props}
                 id={id} />
             <label for={id}>{label}</label>
         </div>

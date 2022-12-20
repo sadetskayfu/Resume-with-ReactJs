@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 280px);
     grid-template-rows: 45px 190px 45px;
-    row-gap: 30px;
+    row-gap: 40px;
     column-gap: 25px;
     &__textarea {
         grid-column: 1/3;

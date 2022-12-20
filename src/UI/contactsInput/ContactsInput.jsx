@@ -1,15 +1,17 @@
 import React from 'react';
 import './style.scss'
 
-const ContactsInput = ({ id, label, name, value, onChange }) => {
+const ContactsInput = ({ register, id, label, errors, ...props }) => {
     return (
-        <div className='contacts-container-input'>
+        <div className={errors ? 'contacts-container-input active' : 'contacts-container-input'}>
             <input
-                name={name}
-                value={value}
-                onChange={onChange}
+                {...register}
+                {...props}
                 id={id} />
             <label className='title title_fz14' htmlFor={id}>{label}</label>
+            <div className='message-error title_fz14'>
+                {errors?.message}
+            </div>
         </div>
 
     );

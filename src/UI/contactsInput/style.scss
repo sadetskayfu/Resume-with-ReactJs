@@ -2,6 +2,11 @@
 
 .contacts-container-input{
         position: relative;
+    &.active {
+        input {
+            border: 1px solid red
+        }    
+        }
     input {
         height: 100%;
         width: 100%;
@@ -13,6 +18,7 @@
             border: 2px solid $main-color;
             box-shadow: 0px 1px  red;
         }
+       
     }
     label {
         display: block;
@@ -25,4 +31,11 @@
         font-weight: 100;
         margin-bottom: 0;
     }
-} 
+}
+
+.message-error {
+    height: 20px;
+    color:rgb(255, 15, 15);
+    margin-top: 5px;
+    margin-left: 5px;
+}

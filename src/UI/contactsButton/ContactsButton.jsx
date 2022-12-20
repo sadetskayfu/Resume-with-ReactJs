@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.scss'
 
-const ContactsButton = ({children}, props) => {
+const ContactsButton = ({isValid, children, ...props}) => {
     return (
-        <button {...props} className='contacts-button'>
+        <button disabled={!isValid} {...props} className={isValid? 'contacts-button' : 'contacts-button active'}>
             {children}
         </button>
     );

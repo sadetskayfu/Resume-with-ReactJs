@@ -11,9 +11,13 @@
     font-weight: bold;
     cursor: pointer;
     color:black;
-    &:hover {
+    &:not([disabled]):hover {
         color:white;
         background: linear-gradient(to top left, $main-color, $secondary-color);
         rotate: 2deg;
+    }
+    &.active {
+        background: rgb(215, 211, 211);
+        cursor: default;
     }
 }
